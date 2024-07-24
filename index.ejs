@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+ <head>
+  <meta charset="UTF-8">
+  <title>Calculadora</title>
+  <script>
+    function gus (rota) {
+     forl.action = rota 
+     if(n1.value == '' || n2.value == ''){
+      document.getElementById ('resultado').innerHTML = ''
+      alert('Não pode deixar vazio!')
+     } else {
+      if(n2.value == 0 && rota == "/div"){
+      document.getElementById ('resultado').innerHTML = ''
+      alert('Zero não é divisivel')
+      } else {
+        forl.submit()
+      }
+     }
+    }
+  </script>
+ </head>
+ <body>
+
+  <form id="forl" action="/" method="post">
+   <label> Primeiro número: </label>
+   <input id= "n1" name="n1"/>
+   <label> Segundo número: </label>
+   <input id= "n2" name="n2"/>
+   <input type="button" onclick="gus('/soma')" value="+"></input>
+   <input type="button" onclick="gus('/sub')" value="-"></input>
+   <input type="button" onclick="gus('/mult')" value="X"></input>
+   <input type="button" onclick="gus('/div')" value="/"></input>
+  </form>
+
+  <h1>Resultado:</h1>
+  <h1 id="resultado"><%=resultado%></h1>
+  
+ </body>
+</html>
